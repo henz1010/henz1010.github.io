@@ -1,0 +1,417 @@
+<!-- 
+    Main page
+    index.html
+    Engineered by henz
+ -->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>henz</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="output.css">
+
+    <!-- JavaScript -->
+    <!-- JavaScript CDN LINK for Navbar section -->
+    <script defer src="https://unpkg.com/alpinejs@3.8.1/dist/cdn.min.js"></script>
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Website layout -->
+    <div class="flex flex-col min-h-screen">
+
+        <!-- Navbar section -->
+        <div class="antialiased bg-gray-100 dark-mode:bg-gray-900">
+            <div class="fixed w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800">
+                <div x-data="{ open: false }"
+                    class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+                    <div class="flex flex-row items-center justify-between p-4">
+                        <a href="#main"
+                            class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">
+                            <img src="./assets/image/hz.png" alt="" width="40" height="40">
+                        </a>
+                        <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline"
+                            @click="open = !open">
+                            <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                                <path x-show="!open" fill-rule="evenodd"
+                                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                                    clip-rule="evenodd"></path>
+                                <path x-show="open" fill-rule="evenodd"
+                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <nav :class="{'flex': open, 'hidden': !open}"
+                        class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
+                        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                            href="#about">
+                            About
+                        </a>
+                        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                            href="#skills">
+                            Skills
+                        </a>
+                        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                            href="#milestones">
+                            Milestones
+                        </a>
+                        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                            href="#portfolio">
+                            Portfolio
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main section -->
+        <section class="justify-center items-center w-full h-full py-48 sm:py-64 laptop:py-60 halflaptop:py-60">
+            <div class="text-center">
+                <h1 class="font-black text-6xl">henz</h1>
+                <p class="text-lg mt-5">
+                    Computer Science Student / Mobilegraphy
+                </p>
+
+                <!-- Download Resume Button -->
+                <div class="justify-center mt-8">
+                    <a class="px-8 py-2 text-lg font-medium text-white transition-colors duration-300 bg-black rounded-full hover:bg-white hover:text-black"
+                        href="assets/document/">
+                        <span class="material-icons align-middle mr-1">
+                            description
+                        </span>
+                        Resume
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About section -->
+        <section class="py-32 laptop:py-44" id="about">
+            <div class="text-center items-center justify-center">
+                <h2 class="font-semibold text-3xl mb-2">
+                    About
+                </h2>
+                <p class="text-lg">
+                    henz's introduction
+                </p>
+            </div>
+            <div class="my-10 mx-30 sm:mx-7 smdesktop:mx-32 laptop:mx-52">
+                <p class="text-justify leading-10">
+                    Hey everyone, I'm Law JunWei or you can called me Henry as my nickname. I'm a Computer Science
+                    student, Full stack developer and photographer from my beloved country, Malaysia. I'm fluent in
+                    Malay, Chinese and English. I'm a guy who is interested about technology, photography, outdoor
+                    activities, sports and playing video games. Other than that, I'm a self-taught person when comes to
+                    learn something new through online. At the same time, I like to involve in team work spirit which I
+                    experienced it during my Final Year Project and some subject assignment as well. Currently, I'm
+                    studying my Bachelor of Computer Science specialized in Software Engineering at Multimedia
+                    University which is located at the Cyberjaya. Previously, I also completed my Diploma in Information
+                    Technology at the same campus as well.
+                </p>
+            </div>
+        </section>
+
+        <!-- Skills section -->
+        <section class="py-36 laptop:py-44" id="skills">
+            <div class="text-center items-center justify-center">
+                <h2 class="font-semibold text-3xl mb-2">
+                    Skills
+                </h2>
+                <p class="text-lg">
+                    What can henz do?
+                </p>
+            </div>
+            <div class="flex flex-wrap space-x-2 justify-center my-10 mx-30 sm:mx-7 smdesktop:mx-32 laptop:mx-52">
+                <span
+                    class="px-4 py-2 my-2 rounded-full text-gray-500 bg-gray-200 font-semibold text-sm flex align-center w-max cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                    HTML
+                </span>
+                <span
+                    class="px-4 py-2 my-2 rounded-full text-gray-500 bg-gray-200 font-semibold text-sm flex align-center w-max cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                    CSS
+                </span>
+                <span
+                    class="px-4 py-2 my-2 rounded-full text-gray-500 bg-gray-200 font-semibold text-sm flex align-center w-max cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                    JavaScript
+                </span>
+                <span
+                    class="px-4 py-2 my-2 rounded-full text-gray-500 bg-gray-200 font-semibold text-sm flex align-center w-max cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                    TailwindCSS
+                </span>
+                <span
+                    class="px-4 py-2 my-2 rounded-full text-gray-500 bg-gray-200 font-semibold text-sm flex align-center w-max cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                    Bootstrap
+                </span>
+                <span
+                    class="px-4 py-2 my-2 rounded-full text-gray-500 bg-gray-200 font-semibold text-sm flex align-center w-max cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                    php
+                </span>
+                <span
+                    class="px-4 py-2 my-2 rounded-full text-gray-500 bg-gray-200 font-semibold text-sm flex align-center w-max cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                    Laravel
+                </span>
+                <span
+                    class="px-4 py-2 my-2 rounded-full text-gray-500 bg-gray-200 font-semibold text-sm flex align-center w-max cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                    MySQL
+                </span>
+                <span
+                    class="px-4 py-2 my-2 rounded-full text-gray-500 bg-gray-200 font-semibold text-sm flex align-center w-max cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                    C
+                </span>
+                <span
+                    class="px-4 py-2 my-2 rounded-full text-gray-500 bg-gray-200 font-semibold text-sm flex align-center w-max cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                    C++
+                </span>
+                <span
+                    class="px-4 py-2 my-2 rounded-full text-gray-500 bg-gray-200 font-semibold text-sm flex align-center w-max cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                    C#
+                </span>
+                <span
+                    class="px-4 py-2 my-2 rounded-full text-gray-500 bg-gray-200 font-semibold text-sm flex align-center w-max cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                    Java
+                </span>
+                <span
+                    class="px-4 py-2 my-2 rounded-full text-gray-500 bg-gray-200 font-semibold text-sm flex align-center w-max cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                    Git
+                </span>
+                <span
+                    class="px-4 py-2 my-2 rounded-full text-gray-500 bg-gray-200 font-semibold text-sm flex align-center w-max cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                    Github
+                </span>
+                <span
+                    class="px-4 py-2 my-2 rounded-full text-gray-500 bg-gray-200 font-semibold text-sm flex align-center w-max cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                    Davinci resolve
+                </span>
+                <span
+                    class="px-4 py-2 my-2 rounded-full text-gray-500 bg-gray-200 font-semibold text-sm flex align-center w-max cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                    Microsoft Office
+                </span>
+                <span
+                    class="px-4 py-2 my-2 rounded-full text-gray-500 bg-gray-200 font-semibold text-sm flex align-center w-max cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                    Adobe Lightroom
+                </span>
+                <span
+                    class="px-4 py-2 my-2 rounded-full text-gray-500 bg-gray-200 font-semibold text-sm flex align-center w-max cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                    Google Snapseed
+                </span>
+            </div>
+        </section>
+
+        <!-- Milestone section -->
+        <section class="py-40 laptop:py-44" id="milestones">
+            <div class="text-center items-center justify-center">
+                <h2 class="font-semibold text-3xl mb-2">
+                    Milestones
+                </h2>
+                <p class="text-lg">
+                    henz's accomplishments, experiences & qualifications
+                </p>
+            </div>
+            <div class="flex justify-center my-10 mx-30 sm:mx-7 smdesktop:mx-32 laptop:mx-52">
+                <ol class="border-l border-black">
+                    <!-- Year 2016 -->
+                    <li>
+                        <div class="flex flex-start items-center pt-3">
+                            <div class="bg-black w-2 h-2 rounded-full -ml-1 mr-3"></div>
+                            <p class="text-gray-500 text-sm">2016</p>
+                        </div>
+                        <div class="mt-10 ml-4 mb-10">
+                            <h4 class="text-gray-800 font-semibold text-xl mb-1.5">
+                                Sijil Pelajaran Malaysia (SPM)
+                            </h4>
+                            <h5 class="text-gray-500 mb-3">
+                                SMK Permas Jaya
+                            </h5>
+                        </div>
+                    </li>
+                    <!-- Year 2017 -->
+                    <li>
+                        <div class="flex flex-start items-center pt-2">
+                            <div class="bg-black w-2 h-2 rounded-full -ml-1 mr-3"></div>
+                            <p class="text-gray-500 text-sm">2017</p>
+                        </div>
+                        <div class="mt-10 ml-4 mb-6">
+                            <h4 class="text-gray-800 font-semibold text-xl mb-1.5">
+                                Diploma in Information Technology
+                            </h4>
+                            <h5 class="text-gray-500 mb-3">
+                                Multimedia University Cyberjaya campus
+                            </h5>
+                        </div>
+                        <div class="mt-0.5 ml-4 mb-10">
+                            <h4 class="text-gray-800 font-semibold text-xl mb-1.5">
+                                Tech Career Days
+                            </h4>
+                            <h5 class="text-gray-500 mb-1">
+                                IT Society Multimedia University Cyberjaya campus
+                            </h5>
+                            <p class="text-gray-400">
+                                Member in Treasure Division
+                            </p>
+                        </div>
+                    </li>
+                    <!-- Year 2018 -->
+                    <li>
+                        <div class="flex flex-start items-center pt-2">
+                            <div class="bg-black w-2 h-2 rounded-full -ml-1 mr-3"></div>
+                            <p class="text-gray-500 text-sm">2018</p>
+                        </div>
+                        <div class="mt-10 ml-4 mb-6">
+                            <h4 class="text-gray-800 font-semibold text-xl mb-1.5">
+                                Volunteer program
+                            </h4>
+                            <h5 class="text-gray-500 mb-3">
+                                Zoo Negara Malaysia
+                            </h5>
+                        </div>
+                        <div class="mt-0.5 ml-4 mb-10">
+                            <h4 class="text-gray-800 font-semibold text-xl mb-1.5">
+                                3 Days of Code
+                            </h4>
+                            <h5 class="text-gray-500 mb-1">
+                                IT Society Multimedia University Cyberjaya campus
+                            </h5>
+                            <p class="text-gray-400">
+                                Assistant in Sponsorship and Logistics Division
+                            </p>
+                        </div>
+                    </li>
+                    <!-- Year 2019 -->
+                    <li>
+                        <div class="flex flex-start items-center pt-2">
+                            <div class="bg-black w-2 h-2 rounded-full -ml-1 mr-3"></div>
+                            <p class="text-gray-500 text-sm">2019</p>
+                        </div>
+                        <div class="mt-10 ml-4 mb-10">
+                            <h4 class="text-gray-800 font-semibold text-xl mb-1.5">
+                                Front-end and Back-end Intern
+                            </h4>
+                            <h5 class="text-gray-500 mb-3">
+                                Internexia Sdn. Bhd.
+                            </h5>
+                            <ul class="list-disc ml-5 text-gray-400">
+                                <li>Developed some basic pages by using PHP and HTML to refresh my memory.</li>
+                                <li>Fixed some minor problems in their websites by using HTML, PHP and JQuery.</li>
+                                <li>Conducted some SQL query to display the result.</li>
+                                <li>Organized some data sorting in Microsoft Excel.</li>
+                                <li>Did some data checking in their e-commerce management websites.</li>
+                                <li>Translated their system language from English to Malay language.</li>
+                            </ul>
+                        </div>
+                        <div class="mt-10 ml-4 mb-10">
+                            <h4 class="text-gray-800 font-semibold text-xl mb-1.5">
+                                Bachelor of Computer Science (Software Engineering)
+                            </h4>
+                            <h5 class="text-gray-500 mb-3">
+                                Multimedia University Cyberjaya campus
+                            </h5>
+                        </div>
+                    </li>
+                    <!-- Year 2022 -->
+                    <li>
+                        <div class="flex flex-start items-center pt-2">
+                            <div class="bg-black w-2 h-2 rounded-full -ml-1 mr-3"></div>
+                            <p class="text-gray-500 text-sm">2022</p>
+                        </div>
+                        <div class="mt-10 ml-4 mb-10">
+                            <h4 class="text-gray-800 font-semibold text-xl mb-1.5">
+                                Coming soon
+                            </h4>
+                        </div>
+                    </li>
+                    <!-- Year 2023 -->
+                    <li>
+                        <div class="flex flex-start items-center pt-2">
+                            <div class="bg-black w-2 h-2 rounded-full -ml-1 mr-3"></div>
+                            <p class="text-gray-500 text-sm">2023</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Portfolio section -->
+        <section class="py-40 laptop:py-44" id="portfolio">
+            <div class="text-center items-center justify-center">
+                <h2 class="font-semibold text-3xl mb-2">
+                    Portfolio
+                </h2>
+                <p class="text-lg">
+                    henz's recent projects
+                </p>
+            </div>
+            <div
+                class="grid grid-cols-2 sm:grid-cols-1 smdesktop:grid-cols-2 laptop:grid-cols-2 gap-2 my-10 mx-30 sm:mx-7 smdesktop:mx-32 laptop:mx-52">
+                <div class="bg-white px-5 py-5 w-auto h-auto shadow-lg rounded-lg">
+                    <h3 class="font-semibold text-xl">henz.github.io</h3>
+                    <h5 class="text-gray-500 text-sm">2022</h5>
+                    <div class="py-4 text-justify">
+                        henz.github.io is a custom personal website, current website that you viewing right now that
+                        shows my portfolio and milestone that involved in the past. The following custom web
+                        application is based on Tailwind CSS framework, HTML and JavaScript.
+                    </div>
+                    <div class="mt-3">
+                        <a href="https://github.com/henz1010/henz1010.github.io" target="blank" type="button"
+                            class="inline-block px-6 py-2.5 bg-gray-800 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-gray-900 hover:shadow-lg focus:bg-gray-900 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-150 ease-in-out">
+                            Github
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white px-5 py-5 w-auto h-auto shadow-lg rounded-lg">
+                    <h3 class="font-semibold text-xl">upmeal</h3>
+                    <h5 class="text-gray-500 text-sm">2021</h5>
+                    <div class="py-4 text-justify">
+                        upmeal is an intelligent meal recommender and sharing application to recommend meals and
+                        allows user to share their recipes in the following application. The following web
+                        application is engineered by using Laravel and Tailwind CSS framework.
+                    </div>
+                    <!-- <div class="mt-3">
+                        <a href="#" type="button"
+                            class="inline-block px-6 py-2.5 bg-gray-800 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-gray-900 hover:shadow-lg focus:bg-gray-900 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-150 ease-in-out">
+                            Github
+                        </a>
+                    </div> -->
+                </div>
+                <div class="bg-white px-5 py-5 w-auto h-auto shadow-lg rounded-lg">
+                    <h3 class="font-semibold text-xl">#hashtech</h3>
+                    <h5 class="text-gray-500 text-sm">2018</h5>
+                    <div class="py-4 text-justify">
+                        #hashtech is an online shopping website which is focusing on selling electronics gadgets in
+                        the following web applications. This project was created with my team member to achieve our
+                        Final Year Project (FYP) during our Diploma in Information Technology. The following web
+                        application is engineered by using HTML, CSS, JavaScript and PHP.
+                    </div>
+                    <!-- <div class="mt-3">
+                        <a href="#" type="button"
+                            class="inline-block px-6 py-2.5 bg-gray-800 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-gray-900 hover:shadow-lg focus:bg-gray-900 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-150 ease-in-out">
+                            Github
+                        </a>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer section -->
+        <footer>
+            <div class="container pt-10">
+                <!-- Social media link -->
+                <div class="flex justify-center mb-10">
+                </div>
+            </div>
+            <div class="text-center p-5">
+                <code>Made with passionate and </code>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
