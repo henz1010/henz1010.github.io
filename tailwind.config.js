@@ -14,7 +14,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        'sans': ['Rubik Regular', 'sans-serif']
+        'sans': ['Rubik Regular', 'sans-serif'],
       },
     },
   },

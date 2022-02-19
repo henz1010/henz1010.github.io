@@ -3,7 +3,8 @@
 
 @font-face {
     font-family: 'Rubik Regular';
-    src: local('Rubik'), url(assets/font/Rubik-Regular.ttf) format('ttf');
+    font-display: swap;
+    src: local('Rubik'), url(assets/font/Rubik-Regular.ttf) format('tff');
 }
 
 @tailwind utilities;
