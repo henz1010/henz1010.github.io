@@ -12,7 +12,11 @@ module.exports = {
       'laptop': '1536px',
       'halflaptop': '767px',
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        'sans': ['Rubik Regular', 'sans-serif']
+      },
+    },
   },
   plugins: [],
 }
